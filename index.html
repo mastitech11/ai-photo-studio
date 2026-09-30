@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="hi"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>All-in-One AI Photo Studio</title>
+ü<!DOCTYPE html><html lang="hi"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>All-in-One AI Photo Studio</title>
 <style>
 *{box-sizing:border-box}body{margin:0;background:#f3f6fb;color:#172033;font:15px Arial}.wrap{max-width:950px;margin:auto;padding:16px}.hero{background:linear-gradient(120deg,#123d76,#286bd1);color:white;padding:22px;border-radius:16px}.card{background:white;border-radius:14px;padding:18px;margin:15px 0;box-shadow:0 5px 20px #16294b12}.row,.colors{display:flex;flex-wrap:wrap;gap:10px;align-items:center}.row>*{flex:1;min-width:130px}input,select,button{padding:10px;border:1px solid #cbd5e1;border-radius:8px;font:inherit}button{background:#1764cf;color:white;border:0;font-weight:bold;cursor:pointer}button:disabled{opacity:.5}.preview{display:block;max-width:100%;max-height:420px;margin:12px auto;background:#eee}.hidden{display:none}.muted{font-size:13px;color:#64748b}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:10px}.status{background:#eef5ff;padding:10px;border-radius:8px;white-space:pre-wrap}.printarea{display:none}
 @media print{body *{visibility:hidden!important}.printarea,.printarea *{visibility:visible!important}.printarea{display:grid!important;position:absolute;left:0;top:0;width:210mm;min-height:297mm;align-content:start;gap:var(--gap,4mm);grid-template-columns:repeat(var(--cols,3),var(--pw,35mm))}.printarea img{width:var(--pw,35mm);height:var(--ph,45mm);object-fit:cover}}
@@ -11,7 +11,7 @@
 <div class="status" id="status">पहले फोटो अपलोड करें।</div></main>
 <script>
 /* अपने deployed Render API URL से बदलें */
-const API_BASE="https://YOUR-API-SERVICE.onrender.com";
+const API_BASE="https://ai-photo-studio-8v7y.onrender.com";
 const $=id=>document.getElementById(id);let original=null,blobNow=null,urlNow=null,cutout=null;
 function msg(t){$("status").textContent=t}
 function show(b){blobNow=b;if(urlNow)URL.revokeObjectURL(urlNow);urlNow=URL.createObjectURL(b);$("preview").src=urlNow;$("preview").classList.remove("hidden");$("download").disabled=false}
