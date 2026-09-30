@@ -17,7 +17,7 @@ app.add_middleware(CORSMiddleware,allow_origins=["*"],allow_credentials=False,al
 _session=None
 def get_session():
     global _session
-    if _session is None: _session=new_session("u2net")
+    if _session is None: _session=new_session("u2netp")
     return _session
 @app.get("/")
 def health(): return {"status":"ok","service":"Photo Studio AI"}
